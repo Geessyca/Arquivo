@@ -1,0 +1,404 @@
+---
+output:
+  xaringan::moon_reader:
+    css: [default, rutgers, shinobi]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```{r, out.width='15%', fig.align ='center' ,echo=FALSE}
+knitr::include_graphics('https://img2.pngio.com/r-markdown-png-size-picture-2039059-r-markdown-png-size-markdown-png-2206_2557.png')
+```
+.left[</br></br></br>]
+.left[#INTRODUÇÃO AO RMARKDOWN]
+</br></br>
+.left[[Gessyca Moreira](https://github.com/Geessyca/-studyfiles)]
+</br></br>
+.left[[CDEC](https://bendeivide.github.io/cdec/)]
+---
+```{r, out.width='15%', fig.align ='center' ,echo=FALSE}
+knitr::include_graphics('https://img2.pngio.com/r-markdown-png-size-picture-2039059-r-markdown-png-size-markdown-png-2206_2557.png')
+```
+.left[</br>]
+.left[#O que é o RMarkdown?]
+.left[    Markdown é uma linguagem de marcação simplificada, criada para que o autor foque no texto e não na formatação e isso é seu diferencial quando comparamos com outras linguagens de marcação como HTML.
+
+  O RMarkdown permite entrelaçar códigos LaTeX e HTML com códigos de outras linguagens como R, Phyton e C++ podendo gerar textos em vários formatos: HTML, PDF e DOC e podendo ser aplicados em várias situações como apresentações em slides, documentos dinâmicos, criação de páginas web e entre outras aplicações.]
+
+---
+```{r, out.width='15%', fig.align ='center' ,echo=FALSE}
+knitr::include_graphics('https://img2.pngio.com/r-markdown-png-size-picture-2039059-r-markdown-png-size-markdown-png-2206_2557.png')
+```
+.left[</br>]
+.left[#Criação do documento]
+
+.center[##File -> New File -> R Markdown]
+
+---
+```{r, out.width='15%', fig.align ='center' ,echo=FALSE}
+knitr::include_graphics('https://img2.pngio.com/r-markdown-png-size-picture-2039059-r-markdown-png-size-markdown-png-2206_2557.png')
+```
+.left[</br>]
+.left[#Cabeçalho]
+.left[    O cabeçalho opcional do seu documento que terá os metadados que controlarão a formatação do documento, e é feito no formato YAMl num estilo lista alinhada delimitada por **---**.]
+
+.pull-left[
+```
+---
+title: "Untitled"
+author: "Gessyca Moreira"
+date: "14/04/2021"
+output: html_document
+---
+```
+]
+
+---
+```{r, out.width='15%', fig.align ='center' ,echo=FALSE}
+knitr::include_graphics('https://img2.pngio.com/r-markdown-png-size-picture-2039059-r-markdown-png-size-markdown-png-2206_2557.png')
+```
+.left[</br>]
+.left[#Sintaxe]
+.left[###**Títulos/Subtítulos**]
+.left[    A ordem hierárquica dos títulos é definida pela quantidade de #, e sua quantidade pode variar de 1 a 6 #.]
+.pull-left[
+```
+# Título 1
+## Título 2
+### Título 3
+#### Título 4
+##### Título 5
+###### Título 6
+```
+]
+.pull-right[
+# Título 1
+## Título 2
+### Título 3
+#### Título 4
+##### Título 5
+###### Título 6
+]
+
+---
+```{r, out.width='15%', fig.align ='center' ,echo=FALSE}
+knitr::include_graphics('https://img2.pngio.com/r-markdown-png-size-picture-2039059-r-markdown-png-size-markdown-png-2206_2557.png')
+```
+.left[</br>]
+.left[###**Estilos**]
+.left[    Para cada tipo de alteração no estilo usamos uma sintaxe diferente.]
+.pull-left[
+```
+_itálico_ ou *itálico*
+  
+__negrito__ ou **negrito**
+
+~~tachado~~
+  
+texto^sobrescrito^
+```
+]
+.pull-right[
+_itálico_ ou *itálico*
+  
+__negrito__ ou **negrito**
+
+~~tachado~~
+  
+texto^sobrescrito^
+]
+
+---
+```{r, out.width='15%', fig.align ='center' ,echo=FALSE}
+knitr::include_graphics('https://img2.pngio.com/r-markdown-png-size-picture-2039059-r-markdown-png-size-markdown-png-2206_2557.png')
+```
+.left[</br>]
+.left[###**Digitação**]
+.left[    Ao usar o Rmarkdown, vemos que sua sintaxe para a criação do texto é semelhante aos editores de textos convencionais.
+
+  E podemos criar novos parágrafos pulando uma linha ou dar três espaços (pressionar duas vezes a tecla TAB) ao final do parágrafo.]
+    
+---
+```{r, out.width='15%', fig.align ='center' ,echo=FALSE}
+knitr::include_graphics('https://img2.pngio.com/r-markdown-png-size-picture-2039059-r-markdown-png-size-markdown-png-2206_2557.png')
+```
+.left[</br>]
+.left[###**Alinhamento do Texto**]
+.left[    Para alinhar os textos podemos utilizar:]
+
+```
+.left[Alinhamento na esquerda]
+.center[Alinhamento no centro]
+.right[Alinhamento na direita]
+```
+</br></br>
+
+.left[**Alinhamento na esquerda**]
+
+.center[**Alinhamento no centro**]
+
+.right[**Alinhamento na direita**]
+---
+```{r, out.width='15%', fig.align ='center' ,echo=FALSE}
+knitr::include_graphics('https://img2.pngio.com/r-markdown-png-size-picture-2039059-r-markdown-png-size-markdown-png-2206_2557.png')
+```
+.left[</br>]
+.left[###**Alinhamento de colunas**]
+.left[    Para alinhar os textos em colunas utilizamos]
+
+```
+.pull-left[**Coluna na esquerda**]
+
+.pull-right[**Coluna na direita**]
+```
+</br></br>
+
+.pull-left[**Coluna na esquerda**]
+.pull-right[**Coluna na direita**]
+
+---
+```{r, out.width='15%', fig.align ='center' ,echo=FALSE}
+knitr::include_graphics('https://img2.pngio.com/r-markdown-png-size-picture-2039059-r-markdown-png-size-markdown-png-2206_2557.png')
+```
+.left[</br>]
+.left[###**Listas**]
+.left[    Podemos criar listas ordenadas, não ordenadas e com sublista.]
+.pull-left[
+**Ordenadas**
+```
+- Primeiro item
+- Segundo item
+- Terceiro item
+```
+**Não ordenadas**
+```
+1. Primeiro item
+2. Segundo item
+3. Terceiro item
+```
+**Com sublista**
+```
+1. Item
+    - Um sub-item
+    - Outro sub-item
+```
+]
+.pull-right[
+**Ordenadas**
+- Primeiro item
+- Segundo item
+- Terceiro item
+
+**Não ordenadas**
+1. Primeiro item
+2. Segundo item
+3. Terceiro item
+
+**Com sublista**
+1. Item
+    - Um sub-item
+    - Outro sub-item
+
+]
+---
+```{r, out.width='15%', fig.align ='center' ,echo=FALSE}
+knitr::include_graphics('https://img2.pngio.com/r-markdown-png-size-picture-2039059-r-markdown-png-size-markdown-png-2206_2557.png')
+```
+.left[</br>]
+.left[###**Tabelas**]
+.left[    Para construir tabelas Usamos pelo ao menos 3 **---** para separar o nome da coluna das linhas e **|** para delimitar as colunas.]
+.pull-left[
+```
+Cabeçalho 1 | Cabeçalho 2
+```
+```
+---------   | -----------
+```
+```
+Célula 1    | Célula 2
+```
+```
+Célula 3    | Célula 4 
+```
+
+]
+</br>
+.pull-right[
+Cabeçalho 1 | Cabeçalho 2
+---------   | -------------
+Célula 1    | Célula 2
+Célula 3    | Célula 4 
+]
+</br></br>
+.left[    Para alinhar as colunas, usamos **:---;** para alinhar à esquerda, **:---:;** para alinhar ao centro e **---:** para alinhar à direita.]
+.pull-left[
+```
+ Esquerda | Centro   | Direita 
+:-------- | :-------:| --------:
+  Célula  | Célula   | Célula
+```
+
+]
+</br>
+.pull-right[
+ Esquerda | Centro   | Direita 
+:-------- | :-------:| --------:
+  Célula  | Célula   | Célula
+]
+---
+```{r, out.width='15%', fig.align ='center' ,echo=FALSE}
+knitr::include_graphics('https://img2.pngio.com/r-markdown-png-size-picture-2039059-r-markdown-png-size-markdown-png-2206_2557.png')
+```
+.left[</br>]
+.left[###**Links**]
+.pull-left[
+```
+[nome do link](endereço do link)
+```
+Ou
+```
+(endereço do link)
+```
+]
+.pull-right[.right[
+[Site CDEC](https://bendeivide.github.io/cdec/)
+
+Ou
+
+(https://bendeivide.github.io/cdec/)
+]]
+---
+```{r, out.width='15%', fig.align ='center' ,echo=FALSE}
+knitr::include_graphics('https://img2.pngio.com/r-markdown-png-size-picture-2039059-r-markdown-png-size-markdown-png-2206_2557.png')
+```
+.left[</br>]
+.left[###**Imagens**]
+.left[    Podemos adicionar imagens direto da internet através do link ou do computador através do endereço do local onde ela esteja ou então podemos referenciá-la e usamos os colchetes para adicionarmos a legenda.]
+.pull-left[
+```
+![](endereço do link)
+![](/caminho/da/imagem.png)
+```
+**Imagem referenciada**
+```
+![Imagem referenciada][imagem]
+         ...
+...fim do documento...
+[imagem]: endereço do link
+```
+**Imagem com link**
+```
+[![](caminho da imagem)](link)
+```
+]
+
+.pull-right[
+.center[[![](https://bendeivide.github.io/cdec/images/logo.png)](https://bendeivide.github.io/cdec)]
+]
+---
+```{r, out.width='15%', fig.align ='center' ,echo=FALSE}
+knitr::include_graphics('https://img2.pngio.com/r-markdown-png-size-picture-2039059-r-markdown-png-size-markdown-png-2206_2557.png')
+```
+.left[</br>]
+.left[###**Citação em blocos**]
+.left[
+```
+> citação nível 1
+
+>> citação nível 2
+
+>>> citação nível 3
+```
+</br></br>
+
+> citação nível 1
+
+>> citação nível 2
+
+>>> citação nível 3
+
+]
+---
+```{r, out.width='15%', fig.align ='center' ,echo=FALSE}
+knitr::include_graphics('https://img2.pngio.com/r-markdown-png-size-picture-2039059-r-markdown-png-size-markdown-png-2206_2557.png')
+```
+.left[</br>]
+.left[#Adicionando códigos]
+.left[    Podemos executar códigos durante a compilação do documento. Para isso adicionamos o código entre um par de 3 acentos graves e a linguagem entre os colchetes.]
+
+
+**Código:**
+
+```
+{}
+imprimir("Olá Mundo!")
+```
+*`r paste("Olá Mundo!")`*
+
+
+.left[    Podemos executar códigos em linha também, adicionado o código entre um par de 1 acentos graves.]
+
+**Código em linha:**
+
+```
+`language imprimir("Olá Mundo!")`
+```
+*`r paste("Olá Mundo!")`*
+
+---
+```{r, out.width='15%', fig.align ='center' ,echo=FALSE}
+knitr::include_graphics('https://img2.pngio.com/r-markdown-png-size-picture-2039059-r-markdown-png-size-markdown-png-2206_2557.png')
+```
+.left[</br>]
+.left[#Trabalhando com gráficos]
+.left[    Como o intuito do CDEC é o estudo da ciência de dados, frequentemente usaremos a apresentação de dados em forma de tabelas e gráficos.
+  Como exemplo usarei parte de um Dataset ["casos de Covid na Índia"](https://api.covid19india.org/csv/latest/case_time_series.csv).
+  
+  Usaremos o pacote kableExtra, para construção da tabela e a função barplot para plotar o gráfico em barras.]
+
+```{r}
+y <- c(3,5,6,28,30,31,34,39,48,63,71,81,91,102,112,126,146,171,198,256,334,403,497,571,657,730,883,1019,1139,1326,1635)
+x <- c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31)
+dados <- data.frame(dias = x, casos = y)
+```
+---
+```{r, out.width='15%', fig.align ='center' ,echo=FALSE}
+knitr::include_graphics('https://img2.pngio.com/r-markdown-png-size-picture-2039059-r-markdown-png-size-markdown-png-2206_2557.png')
+```
+```{r}
+tab <- kableExtra::kable(dados, format = "markdown")
+tab
+```
+---
+```{r, out.width='15%', fig.align ='center' ,echo=FALSE}
+knitr::include_graphics('https://img2.pngio.com/r-markdown-png-size-picture-2039059-r-markdown-png-size-markdown-png-2206_2557.png')
+```
+
+.center[
+```{r}
+rotulo <- c("Dias do mês de Março", "Nº de casos de covid na Índia")
+barplot(y, main="Casos totais na Índia no mês de Março/2020", xlab=rotulo[1], ylab=rotulo[2], names.arg = x, ylim=c(0, 1700), cex.names = 0.8, xaxs = "i")
+```
+]
+---
+```{r, out.width='15%', fig.align ='center' ,echo=FALSE}
+knitr::include_graphics('https://img2.pngio.com/r-markdown-png-size-picture-2039059-r-markdown-png-size-markdown-png-2206_2557.png')
+```
+.left[#Referências
+
+(https://bookdown.org/yihui/rmarkdown/pdf-document.html#data-frame-printing-1)
+
+(https://rmarkdown.rstudio.com/lesson-14.html)
+
+(https://pet-estatistica.github.io/site/download/posts/postJAYME2.html#criando-um-documento-dinamico)
+
+(https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html)
+]
+
+</br>
+
+.center[
+##**Obrigada**!
+]
