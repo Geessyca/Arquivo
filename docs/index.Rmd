@@ -354,7 +354,7 @@ knitr::include_graphics('https://img2.pngio.com/r-markdown-png-size-picture-2039
 .left[</br>]
 .left[#Trabalhando com gráficos]
 .left[    Como o intuito do CDEC é o estudo da ciência de dados, frequentemente usaremos a apresentação de dados em forma de tabelas e gráficos.
-  Como exemplo usarei parte de um Dataset ["casos de Covid na Índia"](https://api.covid19india.org/csv/latest/case_time_series.csv).
+  Como exemplo usei parte de um Dataset ["casos de Covid na Índia"](https://api.covid19india.org/csv/latest/case_time_series.csv).
   
   Usaremos o pacote kableExtra, para construção da tabela e a função barplot para plotar o gráfico em barras.]
 
